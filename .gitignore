@@ -1,0 +1,10 @@
+/.vs
+*/bin/*
+*/Win32/*
+
+*.ipch
+*.dll
+*.exp
+*.obj
+*.user
+*.aps
