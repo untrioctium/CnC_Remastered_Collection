@@ -63,7 +63,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WINDOWS_IGNORE_PACKING_MISMATCH;TRUE_FALSE_DEFINED;WIN32;_DEBUG;_WINDOWS;_USRDLL;TIBERIANDAWN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>./win32lib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./win32lib;../extern/lua;../extern/sol2/single/include/</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -97,7 +97,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WINDOWS_IGNORE_PACKING_MISMATCH;TRUE_FALSE_DEFINED;WIN32;NDEBUG;_WINDOWS;_USRDLL;TIBERIANDAWN_EXPORTS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>./win32lib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./win32lib;../extern/lua;../extern/sol2/single/include/</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4800;4244;4996</DisableSpecificWarnings>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -175,6 +175,36 @@
     <None Include="WINASM.ASM" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\extern\lua\lapi.h" />
+    <ClInclude Include="..\extern\lua\lauxlib.h" />
+    <ClInclude Include="..\extern\lua\lcode.h" />
+    <ClInclude Include="..\extern\lua\lctype.h" />
+    <ClInclude Include="..\extern\lua\ldebug.h" />
+    <ClInclude Include="..\extern\lua\ldo.h" />
+    <ClInclude Include="..\extern\lua\lfunc.h" />
+    <ClInclude Include="..\extern\lua\lgc.h" />
+    <ClInclude Include="..\extern\lua\ljumptab.h" />
+    <ClInclude Include="..\extern\lua\llex.h" />
+    <ClInclude Include="..\extern\lua\llimits.h" />
+    <ClInclude Include="..\extern\lua\lmem.h" />
+    <ClInclude Include="..\extern\lua\lobject.h" />
+    <ClInclude Include="..\extern\lua\lopcodes.h" />
+    <ClInclude Include="..\extern\lua\lopnames.h" />
+    <ClInclude Include="..\extern\lua\lparser.h" />
+    <ClInclude Include="..\extern\lua\lprefix.h" />
+    <ClInclude Include="..\extern\lua\lstate.h" />
+    <ClInclude Include="..\extern\lua\lstring.h" />
+    <ClInclude Include="..\extern\lua\ltable.h" />
+    <ClInclude Include="..\extern\lua\ltests.h" />
+    <ClInclude Include="..\extern\lua\ltm.h" />
+    <ClInclude Include="..\extern\lua\lua.h" />
+    <ClInclude Include="..\extern\lua\luaconf.h" />
+    <ClInclude Include="..\extern\lua\lualib.h" />
+    <ClInclude Include="..\extern\lua\lundump.h" />
+    <ClInclude Include="..\extern\lua\lvm.h" />
+    <ClInclude Include="..\extern\lua\lzio.h" />
+    <ClInclude Include="..\extern\sol2\single\include\sol\forward.hpp" />
+    <ClInclude Include="..\extern\sol2\single\include\sol\sol.hpp" />
     <ClInclude Include="ABSTRACT.H" />
     <ClInclude Include="AIRCRAFT.H" />
     <ClInclude Include="ANIM.H" />
@@ -360,6 +390,40 @@
     <ClInclude Include="WWFILE.H" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\extern\lua\lapi.c" />
+    <ClCompile Include="..\extern\lua\lauxlib.c" />
+    <ClCompile Include="..\extern\lua\lbaselib.c" />
+    <ClCompile Include="..\extern\lua\lcode.c" />
+    <ClCompile Include="..\extern\lua\lcorolib.c" />
+    <ClCompile Include="..\extern\lua\lctype.c" />
+    <ClCompile Include="..\extern\lua\ldblib.c" />
+    <ClCompile Include="..\extern\lua\ldebug.c" />
+    <ClCompile Include="..\extern\lua\ldo.c" />
+    <ClCompile Include="..\extern\lua\ldump.c" />
+    <ClCompile Include="..\extern\lua\lfunc.c" />
+    <ClCompile Include="..\extern\lua\lgc.c" />
+    <ClCompile Include="..\extern\lua\linit.c" />
+    <ClCompile Include="..\extern\lua\liolib.c" />
+    <ClCompile Include="..\extern\lua\llex.c" />
+    <ClCompile Include="..\extern\lua\lmathlib.c" />
+    <ClCompile Include="..\extern\lua\lmem.c" />
+    <ClCompile Include="..\extern\lua\loadlib.c" />
+    <ClCompile Include="..\extern\lua\lobject.c" />
+    <ClCompile Include="..\extern\lua\lopcodes.c" />
+    <ClCompile Include="..\extern\lua\loslib.c" />
+    <ClCompile Include="..\extern\lua\lparser.c" />
+    <ClCompile Include="..\extern\lua\lstate.c" />
+    <ClCompile Include="..\extern\lua\lstring.c" />
+    <ClCompile Include="..\extern\lua\lstrlib.c" />
+    <ClCompile Include="..\extern\lua\ltable.c" />
+    <ClCompile Include="..\extern\lua\ltablib.c" />
+    <ClCompile Include="..\extern\lua\ltests.c" />
+    <ClCompile Include="..\extern\lua\ltm.c" />
+    <ClCompile Include="..\extern\lua\lua.c" />
+    <ClCompile Include="..\extern\lua\lundump.c" />
+    <ClCompile Include="..\extern\lua\lutf8lib.c" />
+    <ClCompile Include="..\extern\lua\lvm.c" />
+    <ClCompile Include="..\extern\lua\lzio.c" />
     <ClCompile Include="AADATA.CPP" />
     <ClCompile Include="ABSTRACT.CPP" />
     <ClCompile Include="ADATA.CPP" />
